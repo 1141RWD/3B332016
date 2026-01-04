@@ -663,34 +663,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalText = document.getElementById("myimagesModalText");
   const closeBtns = Array.from(document.querySelectorAll("[data-myimages-close]"));
 
-  const openModal = (card) => {
-    const img = card.querySelector("img");
-    if (!img) return;
+const openModal = (card) => {
+  const img = card.querySelector("img");
+  if (!img) return;
 
-    const title = card.getAttribute("data-title") || img.alt || "";
-    const desc = card.getAttribute("data-desc") || "";
-    const tags = card.getAttribute("data-tags") || "";
+  const title = card.getAttribute("data-title") || img.alt || "";
+  const desc = card.getAttribute("data-desc") || "";
+  const tags = card.getAttribute("data-tags") || "";
 
-    modalImg.src = img.getAttribute("src");
-    modalImg.alt = title;
+  // ✅ 重要：src 沒有就改用 data-src
+  const src = img.getAttribute("src") || img.getAttribute("data-src");
+  if (!src) return;
 
-    const tagLine = tags ? `<div class="myimages-modal-tags">${tags.split(/\s+/).filter(Boolean).map(t => `<span class="chip">${t}</span>`).join("")}</div>` : "";
-    modalText.innerHTML = `
-      <h3 class="myimages-modal-title">${title}</h3>
-      <p class="myimages-modal-desc">${(desc || "").replace(/\n/g, "<br>")}</p>
-      ${tagLine}
-    `;
+  // ✅ 若縮圖還沒載入，先補上 src（避免 modal 空白）
+  if (!img.getAttribute("src") && img.getAttribute("data-src")) {
+    img.src = img.dataset.src;
+    img.removeAttribute("data-src");
+  }
 
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
+  modalImg.src = src;          // modal 顯示用（也可改成大圖 src）
+  modalImg.alt = title;
 
-    // ✅ 每次打開都回到頂端（解你之前那個「開到下面」的問題）
-    const dialog = modal.querySelector(".myimages-modal-dialog");
-    if (dialog) dialog.scrollTop = 0;
-    modal.scrollTop = 0;
+  const tagLine = tags
+    ? `<div class="myimages-modal-tags">${
+        tags.split(/\s+/).filter(Boolean).map(t => `<span class="chip">${t}</span>`).join("")
+      }</div>`
+    : "";
 
-    document.body.style.overflow = "hidden";
-  };
+  modalText.innerHTML = `
+    <h3 class="myimages-modal-title">${title}</h3>
+    <p class="myimages-modal-desc">${(desc || "").replace(/\n/g, "<br>")}</p>
+    ${tagLine}
+  `;
+
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+
+  const dialog = modal.querySelector(".myimages-modal-dialog");
+  if (dialog) dialog.scrollTop = 0;
+  modal.scrollTop = 0;
+
+  document.body.style.overflow = "hidden";
+};
 
   const closeModal = () => {
     modal.classList.remove("is-open");
@@ -1008,4 +1022,38 @@ document.addEventListener('DOMContentLoaded', () => {
       if (img.dataset && img.dataset.src) io.observe(img);
     });
   }
+});
+// === myimages 真・延遲載入系統 ===
+document.addEventListener('DOMContentLoaded', () => {
+  const imgs = document.querySelectorAll('.myimages-thumb[data-src]');
+  if (!imgs.length) return;
+
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+      observer.unobserve(img);
+    });
+  }, { rootMargin: '200px' });
+
+  imgs.forEach(img => io.observe(img));
+});
+// === works 真・延遲載入系統 ===
+document.addEventListener("DOMContentLoaded", () => {
+  const imgs = document.querySelectorAll(".work-thumb[data-src]");
+  if (!imgs.length) return;
+
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.removeAttribute("data-src");
+      observer.unobserve(img);
+    });
+  }, { rootMargin: "200px" });
+
+  imgs.forEach(img => io.observe(img));
 });
