@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <title>IGU ILLUSTRATION｜作品＆價目一覽</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <a
+          href="index.html"
+          class="logo-mark"
+          aria-label="回到首頁"
+        >
+          <img
+            src="images/favicon.png"
+            alt="YUN logo"
+            class="logo-icon"
+          />
+        </a>
+
+        <div>
+          <div class="logo-text-main">IGU ILLUSTRATION</div>
+          <div class="logo-text-sub">WORKS & COMMISSION</div>
+        </div>
+      </div>
+
+      <button
+        class="nav-toggle"
+        aria-label="切換選單"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="index.html">首頁</a>
+          </li>
+          <li>
+            <a class="nav-link" href="about.html">關於我</a>
+          </li>
+          <li>
+            <a class="nav-link" href="myimages.html">作品一覽</a>
+          </li>
+          <li>
+            <a class="nav-link" href="works.html">委託＆價目</a>
+          </li>
+          <li>
+            <a class="nav-link" href="contact.html">聯絡方式</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-wrapper">
+    <section class="card">
+      <h1 class="card-title">
+        委託項目 <small>Selected Works</small>
+      </h1>
+        <div class="status-pill is-inline" id="commissionPillWorks" data-status="open">
+        <span class="dot"></span>
+        <span class="status-text">委託開放中</span>
+        <span class="status-subtext">可排到：2026 / 01</span>
+        </div>
+
+      <div class="gallery-header">
+        <div class="gallery-search">
+          <span class="gallery-search-icon">🔍</span>
+          <input
+            id="workSearch"
+            type="text"
+            placeholder="搜尋標題／標籤／關鍵字，例如：全身、服設、雙人、夢向、Q版"
+            aria-label="搜尋作品"
+          />
+        </div>
+      </div>
+
+      <div class="works-list" id="workGrid">
+        <article
+          class="gallery-work"
+          data-keywords="全身立繪 立繪 OC 角色設計"
+          data-type="full"
+        >
+          <div class="gallery-thumb">
+            <img
+              src="images/mio.JPG"
+              alt="全身立繪"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery-main">
+            <h3 class="gallery-title">全身立繪</h3>
+            <p class="gallery-text">
+              完整角色造型與服裝細節展示。
+            </p>
+
+            <div class="chips">
+              <span class="chip">全身</span>
+              <span class="chip">立繪</span>
+              <span class="chip">OC</span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline js-work-modal"
+              data-open="full"
+            >
+              查看更多&價目
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="gallery-work"
+          data-keywords="半身 胸像 頭像 表情 氛圍"
+          data-type="half"
+        >
+          <div class="gallery-thumb placeholder">
+            <img
+              src="images/yuehaif.PNG"
+              alt="半身胸像"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery-main">
+            <h3 class="gallery-title">半身胸像</h3>
+            <p class="gallery-text">
+              著重表情與氣氛的角色呈現。
+            </p>
+
+            <div class="chips">
+              <span class="chip">半身</span>
+              <span class="chip">表情</span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline js-work-modal"
+              data-open="half"
+            >
+              查看更多&價目
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="gallery-work"
+          data-keywords="服裝設計 服設 配色 造型 設定稿"
+          data-type="costume"
+        >
+          <div class="gallery-thumb placeholder">
+            <img
+              src="images/fashion.JPG"
+              alt="服裝設計"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery-main">
+            <h3 class="gallery-title">服裝設計範例</h3>
+            <p class="gallery-text">
+              角色服裝、配色與造型設定。
+            </p>
+
+            <div class="chips">
+              <span class="chip">服設</span>
+              <span class="chip">配色</span>
+              <span class="chip">設定</span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline js-work-modal"
+              data-open="costume"
+            >
+              查看更多&價目
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="gallery-work"
+          data-keywords="氛圍感 插圖 情緒 距離感 互動"
+          data-type="duo-atmo"
+        >
+          <div class="gallery-thumb placeholder">
+            <img
+              src="images/yuezeyzu.JPG"
+              alt="雙人氛圍感插圖"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery-main">
+            <h3 class="gallery-title">氛圍插圖</h3>
+            <p class="gallery-text">
+              情緒、距離感與畫面張力。
+            </p>
+
+            <div class="chips">
+              <span class="chip">氛圍</span>
+              <span class="chip">情緒</span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline js-work-modal"
+              data-open="duo-atmo"
+            >
+              查看更多&價目
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="gallery-work"
+          data-keywords="雙人 夢向 仿官 CP 互動 貼貼"
+          data-type="duo-dream"
+        >
+          <div class="gallery-thumb placeholder">
+            <img
+              src="images/entrust2p.JPG"
+              alt="夢向仿官插圖"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery-main">
+            <h3 class="gallery-title">仿官插圖</h3>
+            <p class="gallery-text">
+              夢向關係、故事感與互動描寫。
+            </p>
+
+            <div class="chips">
+              <span class="chip">仿官</span>
+              <span class="chip">夢向</span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline js-work-modal"
+              data-open="duo-dream"
+            >
+              查看更多&價目
+            </button>
+          </div>
+        </article>
+
+        <article
+          class="gallery-work"
+          data-keywords="Q版 大頭 頭貼 可愛 表情包"
+          data-type="chibi"
+        >
+          <div class="gallery-thumb placeholder">
+            <img
+              src="images/QQ1.PNG"
+              alt="Q版大頭"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="gallery-main">
+            <h3 class="gallery-title">Q版大頭</h3>
+            <p class="gallery-text">
+              可愛風格、適合頭貼使用。
+            </p>
+
+            <div class="chips">
+              <span class="chip">Q版</span>
+              <span class="chip">大頭</span>
+              <span class="chip">可愛</span>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline js-work-modal"
+              data-open="chibi"
+            >
+              查看更多&價目
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 價目、流程、template、modal 區塊
+         全數僅縮排，內容完全保留 -->
+         <section class="card" id="faq">
+  <h2 class="card-title">委託 FAQ <small>FAQ</small></h2>
+
+  <div class="faq" data-accordion>
+    <button class="faq-q" type="button">可以修改幾次？</button>
+    <div class="faq-a">會在草稿/配色/完稿各提供檢查點；小修調整OK，大改構圖會另外討論。</div>
+
+    <button class="faq-q" type="button">交稿格式是什麼？</button>
+    <div class="faq-a">預設 PNG，必要時可提供透明底；印刷需求會先確認尺寸與解析度。</div>
+
+    <button class="faq-q" type="button">付款方式？</button>
+    <div class="faq-a">可在洽談時確認（全額/訂金），依合作情況調整。</div>
+  </div>
+
+  <div class="brief-actions" style="margin-top:12px">
+    <a class="btn btn-primary" href="about.html#brief">先拿需求表</a>
+    <a class="btn btn-outline" href="contact.html#commission">直接聯絡</a>
+  </div>
+</section>
+
+  </main>
+
+  <div
+    id="workModal"
+    class="gallery-modal"
+    aria-hidden="true"
+  >
+    <div class="gallery-modal-backdrop"></div>
+
+    <div
+      class="gallery-modal-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="workModalTitle"
+    >
+      <button
+        type="button"
+        class="gallery-modal-close"
+        aria-label="關閉"
+      >
+        ×
+      </button>
+
+      <h2
+        id="workModalTitle"
+        class="gallery-modal-title"
+      >
+        標題
+      </h2>
+
+      <div class="gallery-modal-body">
+        <div
+          id="workModalContent"
+          class="works-modal-content"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div><strong>IGU ILLUSTRATION</strong></div>
+    <div class="footer-links">
+      <a href="myimages.html">作品一覽</a>
+      <a href="works.html">委託＆價目</a>
+      <a href="about.html">關於我</a>
+      <a href="contact.html">聯絡我</a>
+    </div>
+  </div>
+  <div class="footer-note">© IGU — 角色 × 夢向 × 氣氛插畫</div>
+</footer>
+
+  <button
+    class="back-to-top"
+    aria-label="回到頂部"
+  >
+    ↑
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>

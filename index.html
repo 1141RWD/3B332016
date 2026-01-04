@@ -1,1 +1,284 @@
-ABC
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>IGU ILLUSTRATION｜首頁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 字體 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- 樣式 -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 小圖示 -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-block">
+      <a href="index.html" class="logo-mark" aria-label="回到首頁">
+        <img src="images/favicon.png" alt="YUN logo" class="logo-icon">
+      </a>
+      <div>
+        <div class="logo-text-main">IGU ILLUSTRATION</div>
+        <div class="logo-text-sub">夜貓子繪師｜角色 × 夢向 × 插畫</div>
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="切換選單">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">首頁</a></li>
+        <li><a href="about.html" class="nav-link">關於我</a></li>
+        <li><a href="myimages.html" class="nav-link">作品一覽</a></li>
+        <li><a href="works.html" class="nav-link">委託＆價目</a></li>
+        <li><a href="contact.html" class="nav-link">聯絡方式</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page-wrapper">
+  <section class="carousel">
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <img src="images/封面1.png" alt="作品展示 1">
+        <img src="images/封面2.png" alt="作品展示 2">
+        <img src="images/封面3.png" alt="作品展示 3">
+      </div>
+    </div>
+    <div class="carousel-overlay">
+      <div class="overlay-inner">
+        <div class="overlay-tag">IGU ILLUSTRATION</div>
+        <h1 class="overlay-title">歡迎</h1>
+        <p class="overlay-sub">這裡是我的作品集與委託資訊。</p>
+  
+        </div>
+      </div>
+    </div>
+  
+    <button class="carousel-btn prev" type="button" aria-label="上一張">‹</button>
+    <button class="carousel-btn next" type="button" aria-label="下一張">›</button>
+    <div class="carousel-dots" aria-label="輪播指示"></div>
+  </section>
+  <h1></h1>
+  <!-- Hero：簡易自介＋導頁 -->
+<section class="hero">
+  <!-- 左欄：頭像 -->
+  <div class="hero-left hero-profile">
+    <div class="avatar-wrap">
+      <img src="images/hbdhard.JPG" alt="IGU avatar" class="avatar">
+    </div>
+  </div>
+
+  <!-- 右欄：文字 + Status（p 的旁邊） -->
+  <div class="hero-right">
+    <div class="intro-split">
+      <!-- 左：文字區 -->
+      <div class="intro-text">
+        <div class="hero-tagline">ILLUSTRATION / OC / DREAM</div>
+        <div class="hero-manifesto">
+        如果沒有故事，<br>那張圖就還沒完成。
+      </div>
+
+        <h1 class="hero-title">IGU</h1>
+
+        <p class="hero-text">
+          插畫創作者，主畫夢向與原創 OC。<br>
+          喜歡冷中帶熱、克制又失控的關係線，<br>
+          比起「好看」，更在意角色能不能留下來。
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">角色插畫</span>
+          <span class="badge">夢向創作</span>
+          <span class="badge">氣氛系</span>
+        </div>
+      </div>
+
+      <!-- 右：Status -->
+      <div class="intro-status">
+        <div class="status-panel" id="statusPanel" aria-label="能力總覽">
+          <div class="status-head">
+            <div class="status-title">能力總覽</div>
+            <div class="status-sub">STATUS</div>
+          </div>
+
+          <div class="status-list">
+            <div class="status-row">
+              <div class="status-top">
+                <span class="status-name">全身立繪</span>
+                <span class="status-val">7 / 10</span>
+              </div>
+              <div class="status-bar" data-value="70"><span class="status-fill"></span></div>
+            </div>
+
+            <div class="status-row">
+              <div class="status-top">
+                <span class="status-name">半身胸像</span>
+                <span class="status-val">9 / 10</span>
+              </div>
+              <div class="status-bar" data-value="90"><span class="status-fill"></span></div>
+            </div>
+
+            <div class="status-row">
+              <div class="status-top">
+                <span class="status-name">服裝設計</span>
+                <span class="status-val">7 / 10</span>
+              </div>
+              <div class="status-bar" data-value="70"><span class="status-fill"></span></div>
+            </div>
+
+            <div class="status-row">
+              <div class="status-top">
+                <span class="status-name">夢向仿官、氛圍感雙人</span>
+                <span class="status-val">10 / 10</span>
+              </div>
+              <div class="status-bar" data-value="100"><span class="status-fill"></span></div>
+            </div>
+
+            <div class="status-row">
+              <div class="status-top">
+                <span class="status-name">Q版大頭</span>
+                <span class="status-val">7 / 10</span>
+              </div>
+              <div class="status-bar" data-value="70"><span class="status-fill"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero-actions-section">
+  <div class="hero-actions hero-actions-merged">
+    <a href="about.html" class="btn btn-outline btn-small">關於我</a>
+    <a href="myimages.html" class="btn btn-outline btn-small">所有作品</a>
+    <a href="works.html" class="btn btn-outline btn-small">委託&價目</a>
+    <a href="contact.html" class="btn btn-outline btn-small">聯絡我</a>
+  </div>
+</section>
+
+<section>
+
+  <section class="card">
+    <h2 class="card-title">我擅長的不是「畫一張圖」<small>What I Do</small></h2>
+    <p class="card-desc">把角色做成能長出故事的存在，畫面有氣氛、關係有張力、看完會記得。</p>
+  
+    <div class="feature-grid">
+      <article class="feature">
+        <h3>氣氛插畫</h3>
+        <p>夜景、霧氣、逆光、星光；讓畫面有「情緒」而不是只有顏色。</p>
+        <div class="chips"><span class="chip">夜景</span><span class="chip">星光</span><span class="chip">光影</span></div>
+      </article>
+  
+      <article class="feature">
+        <h3>角色設計</h3>
+        <p>服裝與配色會跟角色性格綁在一起，讓人一眼看出「她是誰」。</p>
+        <div class="chips"><span class="chip">配色</span><span class="chip">服裝</span><span class="chip">表情</span></div>
+      </article>
+  
+      <article class="feature">
+        <h3>夢向 / 戲劇感</h3>
+        <p>冷中帶熱、克制又失控；我最愛畫這種看起來很安靜但很危險的關係。</p>
+        <div class="chips"><span class="chip">夢向</span><span class="chip">戀愛線</span><span class="chip">劇情感</span></div>
+      </article>
+    </div>
+  </section>
+  <section class="home-highlight">
+  <div class="highlight-inner">
+
+    <div class="highlight-media">
+      <img src="images/hbdbar.JPG" alt="精選作品">
+    </div>
+
+    <div class="highlight-text">
+      <div class="highlight-label">SELECTED WORK</div>
+      <p class="highlight-quote">
+        「屬於夜晚時分。」
+      </p>
+      <a href="myimages.html" class="highlight-link">
+        查看更多作品 →
+      </a>
+    </div>
+
+  </div>
+</section>
+<section class="card reveal">
+  <div class="status-callout">
+    <div class="status-pill" id="commissionPill" data-status="open" aria-label="委託狀態">
+      <span class="dot"></span>
+      <span class="status-text">委託開放中</span>
+      <span class="status-subtext" id="commissionSubtext">可排到：2026 / 01</span>
+    </div>
+
+    <div class="status-actions">
+      <a class="btn btn-primary" href="contact.html#commission">快速委託</a>
+      <a class="btn btn-outline" href="works.html#price">看價目</a>
+    </div>
+  </div>
+
+  <h2 class="card-title">三步驟開始委託 <small>Quick Start</small></h2>
+  <div class="mini-steps">
+    <article class="mini-step">
+      <div class="mini-step-num">01</div>
+      <div class="mini-step-text">丟「角色/關係」一句話就行（沒有完整設定也可）。</div>
+    </article>
+    <article class="mini-step">
+      <div class="mini-step-num">02</div>
+      <div class="mini-step-text">我會回你：可行性、報價與可交稿日期。</div>
+    </article>
+    <article class="mini-step">
+      <div class="mini-step-num">03</div>
+      <div class="mini-step-text">確認需求後開畫，過程會給你檢查點。</div>
+    </article>
+  </div>
+</section>
+
+<section class="card reveal">
+  <h2 class="card-title">常見問題 <small>FAQ</small></h2>
+
+  <div class="faq" data-accordion>
+    <button class="faq-q" type="button">我沒有完整設定也能委託嗎？</button>
+    <div class="faq-a">
+      可以。你給我一句「角色/關係/想要的氛圍」，我會反問幾個關鍵問題幫你補齊。
+    </div>
+
+    <button class="faq-q" type="button">可以指定風格或參考圖嗎？</button>
+    <div class="faq-a">
+      可以，越明確越好（喜歡/不喜歡都可以丟），我會把「你要的感覺」翻成可畫的指令。
+    </div>
+
+    <button class="faq-q" type="button">急件可以嗎？</button>
+    <div class="faq-a">
+      你先說期限，我會直接告訴你「能不能接」與是否需要急件費。
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-top">
+    <div><strong>IGU ILLUSTRATION</strong></div>
+    <div class="footer-links">
+      <a href="myimages.html">作品一覽</a>
+      <a href="works.html">委託＆價目</a>
+      <a href="about.html">關於我</a>
+      <a href="contact.html">聯絡我</a>
+    </div>
+  </div>
+  <div class="footer-note">© IGU — 角色 × 夢向 × 氣氛插畫</div>
+</footer>
+
+<button class="back-to-top" aria-label="回到頂部">↑</button>
+<script src="main.js"></script>
+</body>
+</html>
