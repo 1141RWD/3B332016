@@ -2118,3 +2118,7 @@ button, input, select, textarea, p{
 .form-note.highlight strong{
   color: rgba(125,12,12,.9);
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
