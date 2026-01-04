@@ -264,10 +264,10 @@ const PROCESS = [
       samples: [
         { src: "images/mio.JPG", alt: "全身立繪範例", caption: "全身立繪｜範例" },
         { src: "images/miocity.JPG", alt: "全身立繪範例", caption: "全身立繪｜範例" },
-        { src: "images/fullzyu.JPG", alt: "全身立繪範例", caption: "全身立繪｜範例" },
+        { src: "images/fullzyu.jpg", alt: "全身立繪範例", caption: "全身立繪｜範例" },
         { src: "images/entrustfull.JPEG", alt: "全身立繪範例", caption: "全身立繪｜範例" },
         { src: "images/koyanaall.JPG", alt: "全身立繪範例", caption: "全身立繪｜範例" },
-        { src: "images/fullessay.JPG", alt: "全身立繪範例", caption: "全身立繪｜範例" }
+        { src: "images/fullessay.jpg", alt: "全身立繪範例", caption: "全身立繪｜範例" }
 
       ],
       priceTable: [
@@ -322,7 +322,7 @@ const PROCESS = [
         { src: "images/yuezeyzu.JPG", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
         { src: "images/hbdbar.JPG", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
         { src: "images/hbdidol.JPG", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
-        { src: "images/Vox3rd.PNG", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
+        { src: "images/Vox3rd.png", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
         { src: "images/hibali.JPG", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
         { src: "images/miolove.JPG", alt: "氛圍插圖範例", caption: "氛圍插圖｜範例" },
       ],
