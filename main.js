@@ -304,8 +304,8 @@ const PROCESS = [
       lead: "以服裝概念、配色、材質與細節為主的設計呈現。",
       samples: [
         { src: "images/CD.JPG", alt: "服裝設計範例", caption: "服裝設計｜範例" },
-        { src: "images/CD1.JPG", alt: "服裝設計範例", caption: "服裝設計｜範例" },
-        { src: "images/CD2.JPG", alt: "服裝設計範例", caption: "服裝設計｜範例" }
+        { src: "images/CD1.jpg", alt: "服裝設計範例", caption: "服裝設計｜範例" },
+        { src: "images/CD2.jpg", alt: "服裝設計範例", caption: "服裝設計｜範例" }
       ],
       priceTable: [
         { item: "服設（單套）", desc: "正面主視覺＋重點細節", price: "NT$ 900 ~ 1500" },
