@@ -50,9 +50,11 @@
   <section class="carousel">
     <div class="carousel-viewport">
       <div class="carousel-track">
-        <img src="images/封面1.png" alt="作品展示 1">
-        <img src="images/封面2.png" alt="作品展示 2">
-        <img src="images/封面3.png" alt="作品展示 3">
+<div class="carousel-track">
+  <img src="images/封面1.png" alt="作品展示 1" decoding="async" fetchpriority="high">
+  <img data-src="images/封面2.png" alt="作品展示 2" decoding="async">
+  <img data-src="images/封面3.png" alt="作品展示 3" decoding="async">
+</div>
       </div>
     </div>
     <div class="carousel-overlay">
@@ -75,7 +77,7 @@
   <!-- 左欄：頭像 -->
   <div class="hero-left hero-profile">
     <div class="avatar-wrap">
-      <img src="images/hbdhard.JPG" alt="IGU avatar" class="avatar">
+<img src="images/hbdhard.JPG" alt="IGU avatar" class="avatar" loading="lazy" decoding="async">
     </div>
   </div>
 
@@ -197,7 +199,7 @@
   <div class="highlight-inner">
 
     <div class="highlight-media">
-      <img src="images/hbdbar.JPG" alt="精選作品">
+<img src="images/hbdbar.JPG" alt="精選作品" loading="lazy" decoding="async">
     </div>
 
     <div class="highlight-text">

@@ -969,3 +969,43 @@ window.open(gmailUrl, "_blank");
   window.addEventListener("resize", update);
   update();
 })();
+// === 延後載入輪播圖片 ===
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  if (!track) return;
+
+  const imgs = Array.from(track.querySelectorAll('img'));
+
+  function loadImage(img) {
+    if (!img || !img.dataset || !img.dataset.src) return;
+    if (!img.src) {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    }
+  }
+
+  // 預載第二張（1 秒後）
+  setTimeout(() => loadImage(imgs[1]), 1000);
+
+  // 監聽輪播按鈕
+  document.querySelectorAll('.carousel-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      imgs.forEach(loadImage);
+    });
+  });
+
+  // IntersectionObserver：真正進視窗才載
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        loadImage(entry.target);
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: '200px' });
+
+    imgs.forEach(img => {
+      if (img.dataset && img.dataset.src) io.observe(img);
+    });
+  }
+});
