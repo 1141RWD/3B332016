@@ -47,9 +47,9 @@ body{
 html, body { height: 100%; }
 
 body{
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display:flex;
+  flex-direction:column;
+  align-items: stretch; /* ✅ 讓子元素撐滿寬度 */
 }
 
 /* 讓主要內容撐開，把 footer 推到底 */
@@ -58,6 +58,8 @@ body{
   margin: 18px auto 0;     /* 把原本的 70px 底部 margin 拿掉 */
   padding: 0 16px 40px;    /* 需要空間用 padding 給，不要用 margin 撐 */
 }
+.site-header{ width: 100%; }
+.page-wrapper{ width: 100%; }
 
 /* footer 自己吃剩下的位置（保險用） */
 .site-footer{
@@ -82,13 +84,15 @@ a:hover{ text-decoration: underline; text-decoration-color: rgba(125,12,12,.35);
   z-index: 60;
 }
 
-/* ============ Layout ============ */
 .page-wrapper{
+  flex: 1;
+  width: 100%;
   max-width: 1000px;
-  margin: 18px auto 70px;
+  margin: 18px auto 0;   /* ✅ 不要再有 70px 底部 margin */
   padding: 0 16px 40px;
+  position: relative;
+  z-index: 1;
 }
-
 /* ============ Header / Nav ============ */
 .site-header{ width:100%; }
 
